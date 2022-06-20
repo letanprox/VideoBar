@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="ka"></div>
+<div id="ki"></div>
+
+
+<style>
+    #ka{
+        width: 30px;
+        height: 30px;
+        background-color: darkcyan;
+        margin: auto;
+        position: relative;
+        
+    }
+
+    #ka:hover + #ki{
+        animation: aniName 0.5s infinite;
+    -moz-animation: aniName 0.5s infinite;
+    -webkit-animation: aniName 0.5s infinite;
+    -o-animation: aniName 0.5s infinite;
+    }
+
+    #ki{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: rebeccapurple;
+        position: relative;
+    }
+
+
+
+    @keyframes aniName {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1;}
+}
+</style>
+</body>
+</html>

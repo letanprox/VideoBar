@@ -1,0 +1,150 @@
+.Volume{
+    position: absolute;
+    bottom: 0%;
+    right: 40px;                /**change**/
+    height: 40px;             /**change**/ 
+    width: auto;
+    transform: rotate(-90deg);
+    display: none;
+    z-index: 2;
+}
+
+.Speaker{
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width:40px;               /**change**/ 
+    transform: rotate(90deg);
+}
+
+#volume_btn{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 22%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56%;
+    height: 56%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#x_btn{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 22%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56%;
+    height: 56%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.Seekvolume{
+    position: absolute;
+    left: 37px;              /**change**/ 
+    top: 0%;
+    width: 70px;             /**change**/ 
+    height: 100%; 
+    display: none;
+}
+
+#thumbvolume{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 84%;
+    height: 70%;           
+    z-index: 4;
+    -webkit-appearance: none;
+    -moz-apperance: none !important;
+    background: none;
+    outline: none !important;
+    cursor: pointer;
+    border: none;
+}
+
+
+#thumbvolume:focus {
+    outline: none;
+    border: none;
+}
+
+#thumbvolume::-moz-range-track {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+#thumbvolume::-ms-track {
+    border: inherit;
+    color: transparent; 
+    background: transparent;
+}
+/**------------------------------------------**/
+#thumbvolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;                  /**change**/
+    width: 16px;                      /**change**/
+    border-radius: 50%;
+    border: none;
+}
+#thumbvolume::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 16px;                 /**change**/
+    width: 16px;                      /**change**/
+    border-radius: 50%;
+    border: none;
+}
+#thumbvolume::-ms-thumb {
+    border: 0;
+    height: 16px;                /**change**/
+    width: 16px;                      /**change**/
+    border-radius: 50%;
+}
+/**------------------------------------------**/
+#thumbvolume::-ms-fill-lower,
+#thumbvolume::-ms-fill-upper {
+  background: transparent;
+}
+#thumbvolume::-ms-tooltip {
+  display: none;
+}
+
+#progressvolume[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+#progressvolume{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    position:absolute;
+    top: 40%;
+    left: 4%;
+    width: 76%;
+    height: 20%;
+    opacity: 0.7;
+    z-index: 3;
+}
+
+.Speaker:hover + .Seekvolume{
+    display: block;
+}
+.Seekvolume:hover{
+    display: block;
+}
+
+
+
+

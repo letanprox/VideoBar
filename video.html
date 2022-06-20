@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="seekbar.css">
+    <link rel="stylesheet" href="time.css">
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="volume.css">
+    <link rel="stylesheet" href="expand.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="controls.js"></script>
+</head>
+<body>
+    <div class="CustomVideo">
+        <div class="WrapVideo">
+<!--------------------------------------------------------->            
+            <div class="Startvideo">
+                <div id="playstart">
+                    <div id="play_mbtn"> 
+                        <svg width="100%" height="100%" viewBox="-1.5 -5 135 135" x="0px" y="0px" fill="white"
+                            stroke="#000000" stroke-width="0" style="enable-background:new 0 0 124.512 124.512;" >
+                            <path d="M113.956,57.006l-97.4-56.2c-4-2.3-9,0.6-9,5.2v112.5c0,4.6,5,7.5,9,5.2l97.4-56.2 C117.956,65.105,117.956,59.306,113.956,57.006z"></path>
+                        </svg>
+                    </div>
+    
+                    <div id="pause_mbtn">
+                        <svg width="100%" height="100%" viewBox="-1.5 -1.5 32 32" x="0px" y="0px"  
+                            style="enable-background:new 0 0 28.825 28.824;" fill="white" stroke="#000000" stroke-width="0">
+                            <path d="M12.213,3v22.824c0,1.656-1.343,3-3,3H3.889c-1.658,0-3-1.344-3-3V3c0-1.656,1.342-3,3-3h5.324 C10.87,0,12.213,1.344,12.213,3z M24.935,0h-5.323c-1.658,0-3,1.344-3,3v22.824c0,1.656,1.342,3,3,3h5.323c1.658,0,3-1.344,3-3V3 C27.935,1.344,26.594,0,24.935,0z"></path> 
+                        </svg>   
+                    </div>
+                </div>
+            </div>
+
+<!--------------------------------------------------------->        
+            <video id="myVideo">
+                <source src="heart.mp4" type="video/mp4" />    
+                <!-- <source src="monster.webm" type="video/webm" />   -->
+            </video>      
+
+<!--------------------------------------------------------->        
+            <div class="LoadingVideo">
+                <div class="Wrap_loading">
+                    <div class="Loading"></div>
+                    <div id="cor_one"></div>
+                    <div id="cor_two"></div>
+               </div>
+            </div>       
+                     
+<!--------------------------------------------------------->
+            <div class="Play">
+                <div id="play_btn"> 
+                    <svg width="100%" height="100%" viewBox="-1.5 -5 135 135" x="0px" y="0px" fill="white"
+                        stroke="#000000" stroke-width="0" style="enable-background:new 0 0 124.512 124.512;" >
+                        <path d="M113.956,57.006l-97.4-56.2c-4-2.3-9,0.6-9,5.2v112.5c0,4.6,5,7.5,9,5.2l97.4-56.2 C117.956,65.105,117.956,59.306,113.956,57.006z"></path>
+                    </svg>
+                </div>
+
+                <div id="pause_btn">
+                    <svg width="100%" height="100%" viewBox="-1.5 -1.5 32 32" x="0px" y="0px"  
+                        style="enable-background:new 0 0 28.825 28.824;" fill="white" stroke="#000000" stroke-width="0">
+                        <path d="M12.213,3v22.824c0,1.656-1.343,3-3,3H3.889c-1.658,0-3-1.344-3-3V3c0-1.656,1.342-3,3-3h5.324 C10.87,0,12.213,1.344,12.213,3z M24.935,0h-5.323c-1.658,0-3,1.344-3,3v22.824c0,1.656,1.342,3,3,3h5.323c1.658,0,3-1.344,3-3V3 C27.935,1.344,26.594,0,24.935,0z"></path> 
+                    </svg>   
+                </div>
+
+            </div>
+<!--------------------------------------------------------->
+            <div class="Seekbar">
+                <input    id="thumb"    type="range" value="0" max="1000" step="1">
+                <progress id="progress"              value="0" max="1000" ></progress>
+            </div>
+<!--------------------------------------------------------->
+            <div class="Time">
+                <div id="time">-00:00</div>
+            </div>
+<!--------------------------------------------------------->
+            <div class="Volume">
+                <div class="Speaker">
+
+                    <div id="volume_btn">
+                        <svg width="100%" height="100%" viewBox="-3 -3 120 120"  x="0px" y="0px"  fill="white"
+                            style="enable-background:new 0 0 115.3 115.3;" stroke="#000000" stroke-width="0"> 
+                            <path id="min_volume" d="M47.9,14.306L26,30.706H6c-3.3,0-6,2.7-6,6v41.8c0,3.301,2.7,6,6,6h20l21.9,16.4c4,3,9.6,0.2,9.6-4.8v-77 C57.5,14.106,51.8,11.306,47.9,14.306z"></path> 
+                            <path id="mid_volume" d="M77.3,24.106c-2.7-2.7-7.2-2.7-9.899,0c-2.7,2.7-2.7,7.2,0,9.9c13,13,13,34.101,0,47.101c-2.7,2.7-2.7,7.2,0,9.899 c1.399,1.4,3.199,2,4.899,2s3.601-0.699,4.9-2.1C95.8,72.606,95.8,42.606,77.3,24.106z"></path>
+                            <path id="max_volume" d="M85.1,8.406c-2.699,2.7-2.699,7.2,0,9.9c10.5,10.5,16.301,24.4,16.301,39.3s-5.801,28.8-16.301,39.3 c-2.699,2.7-2.699,7.2,0,9.9c1.4,1.399,3.2,2.1,4.9,2.1c1.8,0,3.6-0.7,4.9-2c13.1-13.1,20.399-30.6,20.399-49.2 c0-18.6-7.2-36-20.399-49.2C92.3,5.706,87.9,5.706,85.1,8.406z"></path> 
+                        </svg>
+                    </div>
+
+                    <div id="x_btn" style="display: none;" >
+                        <svg  width="100%" height="100%" fill="white" viewBox="30 0 512 512" 
+                            style="enable-background:new 0 0 512 512;" x="0px" y="0px" stroke="#000000" stroke-width="0">
+                            <path d="M461.253,256l25.375-25.375c12.496-12.492,12.496-32.758,0-45.25c-12.5-12.5-32.758-12.5-45.258,0l-25.371,25.371 l-25.371-25.371c-12.5-12.5-32.758-12.5-45.258,0c-12.496,12.492-12.496,32.758,0,45.25L370.745,256l-25.375,25.375 c-12.496,12.492-12.496,32.758,0,45.25c6.25,6.25,14.438,9.375,22.629,9.375s16.379-3.125,22.629-9.375l25.371-25.371 l25.371,25.371c6.25,6.25,14.438,9.375,22.629,9.375s16.379-3.125,22.629-9.375c12.496-12.492,12.496-32.758,0-45.25L461.253,256z"></path>
+                        </svg>
+                    </div>
+
+                </div> 
+
+
+                <div class="Seekvolume">
+                    <input    id="thumbvolume"    type="range" value="100" max="100" step="1">
+                    <progress id="progressvolume"              value="100" max="100" ></progress>
+                </div>
+
+            </div>
+<!--------------------------------------------------------->
+            <div class="Expand">
+                <div id="expand_btn" >
+                    <svg  width="100%" height="100%" viewBox="1.6 1.5 15 15" fill="white">
+                        <path d="M4.5 11H3v4h4v-1.5H4.5V11zM3 7h1.5V4.5H7V3H3v4zm10.5 6.5H11V15h4v-4h-1.5v2.5zM11 3v1.5h2.5V7H15V3h-4z"/>
+                    </svg>
+                </div>
+                <div id="miniature_btn">
+                    <svg  width="100%" height="100%" viewBox="1.6 1.5 15 15" fill="white" >
+                        <path d="M3 12.5h2.5V15H7v-4H3v1.5zm2.5-7H3V7h4V3H5.5v2.5zM11 15h1.5v-2.5H15V11h-4v4zm1.5-9.5V3H11v4h4V5.5h-2.5z"/>
+                    </svg>                
+                </div>
+            </div>
+<!--------------------------------------------------------->                             
+        </div>
+    </div>
+
+
+    <!-- <div id="cac">delete</div>
+    <style>
+        #cac{
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background-color: aqua;
+        }
+    </style> -->
+
+</body>
+</html>
+
+
+
+

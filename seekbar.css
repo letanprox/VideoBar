@@ -1,0 +1,97 @@
+.Seekbar{
+    position: absolute;
+    bottom: 0%;
+    left: 40px;     /**change**/
+    right: 140px;   /**change**/
+    width: auto;   
+    height: 40px; /**change**/
+    display: none;
+    z-index: 2;
+}
+/**------------------------------------------**/
+#thumb{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;    /**change**/
+    z-index: 4;
+    -webkit-appearance: none;
+    -moz-apperance: none !important;
+    background: none;
+    outline: none !important;
+    cursor: pointer;
+    border: none;
+}
+
+#thumb:focus {
+    outline: none;
+    border: none;
+}
+
+#thumb::-moz-range-track {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+#thumb::-ms-track {
+    border: inherit;
+    color: transparent; 
+    background: transparent;
+}
+/**------------------------------------------**/
+#thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;                /**change**/
+    width: 16px;                 /**change**/
+    border-radius: 50%;
+    border: none;
+}
+#thumb::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 16px;                /**change**/
+    width: 16px;                 /**change**/
+    border-radius: 50%;
+    border: none;
+}
+#thumb::-ms-thumb {
+    border: 0;
+    height: 16px;               /**change**/
+    width: 16px;                /**change**/
+    border-radius: 50%;
+}
+/**------------------------------------------**/
+#thumb::-ms-fill-lower,
+#thumb::-ms-fill-upper {
+  background: transparent;
+}
+#thumb::-ms-tooltip {
+  display: none;
+}
+/**------------------------------------------**/
+
+#progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+#progress{
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    top: 40%;
+    left: 1%;
+    width: 98%;
+    height: 20%;
+    z-index: 3;
+    opacity: 0.7;
+    background-color: brown;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
