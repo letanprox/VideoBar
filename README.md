@@ -1,6 +1,6 @@
 # VideoBar
 
-Code được viết ra vào năm cấp 3!!!
+I wrote this source code when I was in highshool
 
 
 <img width="922" alt="Screen Shot 2022-06-20 at 12 50 33 1" src="https://user-images.githubusercontent.com/54614140/174534146-e425c60b-e69b-453b-ad49-21cc07da66e8.png">
